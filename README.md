@@ -1,5 +1,5 @@
 # DTSNet-O2DTD
-This repository provides the official implementation of the paper titled <b>“...................”</b> The paper has been submitted in Nature Scientific Data.
+This repository provides the official implementation of the paper titled <b>“O2DTD: An annotated dataset for training deep learning systems for off-road open desert trail detection”</b> The paper has been submitted for consideration in the Nature Scientific Data journal.
 
 ## Citation
 If you use any part of the provided code in your research, please consider citing the paper as follows:
