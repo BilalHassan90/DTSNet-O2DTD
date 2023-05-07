@@ -35,9 +35,7 @@ Alternatively, we also provide a yml file that contains all dependencies used fo
 ## Dataset
 We have curated our own local dataset called Off-Road Open Desert Trail Detection (O2DTD), which is the first and largest dataset to focus on desert free space detection. We believe O2DTD dataset will help advance off-road autonomous driving and navigation systems. The dataset can be downloaded from the following link:
 
-
-1) Armed Forces Institute of Ophthalmology (AFIO) Dataset [URL](https://www.sciencedirect.com/science/article/pii/S2352340920302365) (contains correlated fundus and OCT scans of glaucomatous and healthy subjects)
-2) ORIGA Dataset [URL](https://drive.google.com/drive/folders/1VPCvVsPgrfPNIl932xgU3XC_WFLUsXJR) (contains fundus images of healthy and glaucomic patients)
+[O2DTD Dataset](https://drive.google.com/file/d/1A-R5un-S6QiFb4nLzGhCzGB7hdqdrF0-/view?usp=sharing)
 
 ## Steps 
 <p align="justify">
