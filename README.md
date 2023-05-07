@@ -39,6 +39,11 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 
 ## Steps 
 <p align="justify">
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol> 
 <b>Training the Model</b>
 <p align="justify">
 1) Create an environment using yml file and install any other packages if neccessary.
