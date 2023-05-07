@@ -71,7 +71,7 @@ print({"frequency_weighted_IoU":f_weighted_iou , "mean_IoU":mean_IoU , "class_wi
 
 
 TATL=[history.history['accuracy'], history.history['val_accuracy'], history.history['loss'], history.history['val_loss'], iou]
-np.savetxt('Model.csv', TATL, delimiter=',',fmt='%s')
+np.savetxt('Data/TestDataset/results_summary/Model.csv', TATL, delimiter=',',fmt='%s')
 
 folder = "Data/TestDataset/Images/"
 for filename in os.listdir(folder):
