@@ -40,30 +40,28 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 ## Steps 
 <p align="justify">
 <b>Training the Model</b>
-<ol>
 <p align="justify">
-<li>Create an environment using yml file and install any other packages if neccessary.</li> 
+Create an environment using yml file and install any other packages if neccessary.
 <p align="justify">
-<li>Download the O2DTD dataset from the link above.</li> 
+Download the O2DTD dataset from the link above.
 <p align="justify">
-<li>Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.</li> 
+Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.
 <p align="justify">
-<li>Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.</li> 
+Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.
 <p align="justify">
-<li>Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.</li> 
+Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.
 <p align="justify">
-<li>Open Trainer.py file, specify the learning rate (line 27), and optimizer (line 28 to line 30). For benchmarking, we have tried three different learning rates (0.1, 0.01, 0.001) and three different optimizers (SGD, Adadelta, Adam). By default, the Trainer.py file contains the hyperparameters that produced the best results.</li> 
+Open Trainer.py file, specify the learning rate (line 27), and optimizer (line 28 to line 30). For benchmarking, we have tried three different learning rates (0.1, 0.01, 0.001) and three different optimizers (SGD, Adadelta, Adam). By default, the Trainer.py file contains the hyperparameters that produced the best results.
 <p align="justify">
-<li>Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.</li> 
+Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.
 <p align="justify">
-<li>Check all other parameters and directories and update them if required.</li> 
+Check all other parameters and directories and update them if required.
 <p align="justify">
-<li>Run Trainer.py script to begin the training. </li> 
+Run Trainer.py script to begin the training. 
 <p align="justify">
-<li>After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder. </li> 
+After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder.
 <p align="justify">
-<li>We have also provided the best-segmentation results achieved on the test dataset in the '' directory.</li> 
-</ol> 
+We have also provided the best-segmentation results achieved on the test dataset in the '' directory.
 
 <b>Using Trained Instance of the Model</b>
 <p align="justify">
