@@ -42,11 +42,17 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 <b>Training the Model</b>
 <p align="justify">
 1) Create an environment using yml file and install any other packages if neccessary.
+<p align="justify">
 2) Download the O2DTD dataset from the link above.
+<p align="justify">
 3) Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.
+<p align="justify">
 4) Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.
+<p align="justify">
 5) Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.
+<p align="justify">
 6) Open Trainer.py file, specify the learning rate (line 27), and optimizer (line 28 to line 30). For benchmarking, we have tried three different learning rates (0.1, 0.01, 0.001) and three different optimizers (SGD, Adadelta, Adam). By default, the Trainer.py file contains the hyperparameters that produced the best results.
+<p align="justify">
 7) Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.
 8) Check all other parameters and directories and update them if required.
 9) Run Trainer.py script to begin the training. 
