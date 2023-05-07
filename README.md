@@ -54,16 +54,23 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 6) Open Trainer.py file, specify the learning rate (line 27), and optimizer (line 28 to line 30). For benchmarking, we have tried three different learning rates (0.1, 0.01, 0.001) and three different optimizers (SGD, Adadelta, Adam). By default, the Trainer.py file contains the hyperparameters that produced the best results.
 <p align="justify">
 7) Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.
+<p align="justify">
 8) Check all other parameters and directories and update them if required.
+<p align="justify">
 9) Run Trainer.py script to begin the training. 
+<p align="justify">
 10) After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
+<p align="justify">
 11) We have also provided the best-segmentation results achieved on the test dataset in the '' directory. 
 
 <b>Using Trained Instance of the Model</b>
-
+<p align="justify">
 1) Repeat the steps 1 to 5, as mentioned above.
+<p align="justify">
 2) Open Evaluation.py file, load the trained model (line 183), and choose the loss function used during the model training (line 185 to 187).
+<p align="justify">
 3) Run the Evaluation.py script to segment the test images using saved model instance. 
+<p align="justify">
 4) After the evaluation completes, the segmented results along with the MAT files containing confidence scores will be stored in the '…Data/TestDataset/ResultsMATFiles//' folder. The results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
 
 ## Results
