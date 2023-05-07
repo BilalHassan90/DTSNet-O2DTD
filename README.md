@@ -39,36 +39,26 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 
 ## Steps 
 <p align="justify">
-<b>For Training the Model</b>
+<b>Training the Model</b>
 
 1) Create an environment using yml file and install any other packages if neccessary.
 2) Download the O2DTD dataset from the link above.
 3) Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.
 4) Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.
 5) Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.
+6) Open Trainer.py file, specify the learning rate (line 27), and optimizer (line 28 to line 30). For benchmarking, we have tried three different learning rates (0.1, 0.01, 0.001) and three different optimizers (SGD, Adadelta, Adam). By default, the Trainer.py file contains the hyperparameters that produced the best results.
+7) Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.
+8) Check all other parameters and directories and update them if required.
+9) Run Trainer.py script to begin the training. 
+10) After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
+11) We have also provided the best-segmentation results achieved on the test dataset in the '' directory. 
 
-	Use 'augmentation.py' or 'augmentor.m' to augment the training scans
-4) Put the augmented training images in '…\trainingDataset\train_images' and '…\codebase\models\trainingSet' folders. The former one is used for segmentation and the latter one is used for the classification purposes.
-5) Put the training annotations (for segmentation) in '…\trainingDataset\train_annotations' folder
-6) Put validation images in '…\trainingDataset\val_images' and '…\codebase\models\validationSet' folders. The former one is used for segmentation and the latter one is used for the classification purposes.
-7) Put validation annotations (for segmentation) in '…\trainingDataset\val_annotations' folder. Note: the images and annotations should have same name and extension (preferably .png).
-8) Put test images in '…\testingDataset\test_images' folder and their annotations in '…\testingDataset\test_annotations' folder
-9) Use 'trainer.py' file to train RAG-Net<sub>v2</sub> on preprocessed scans and also to evaluate the trained model on test scans. The results on the test scans are saved in ‘…\testingDataset\segmentation_results’ folder. This script also saves the trained model in 'model.h5' file.
-10) Run 'ragClassifier.py' script to classify the preprocessed test scans as normal or glaucomic. The results are saved as a mat file in '…\testingDataset\diagnosisResults' folder. Note: step 10 can only be done once the step 9 is finished because the model trained in step 9 is required in step 10. 
-11) Once step 10 is completed, run 'trainSVM.m' script to train the SVM model for grading the severity of the classified glaucomic scans.
-12) Once the SVM is trained, run 'glaucomaGrader.m' to get the grading results.
-13) The trained models can also be ported to MATLAB using ‘kerasConverter.m’ (this step is optional and only designed to facilitate MATLAB users if they want to avoid Python analysis).
-14) Some additional results (both qualitative and quantitative) of the proposed framework are also presented in the '…\results' folder. 
+<b>Using Trained Instance of the Model</b>
 
-<b>For Fundus Analysis</b>
-
-15) Download the desired dataset
-16) Put the training scans in '…\codebase\models\trainingSet\glaucoma' and '…\codebase\models\trainingSet\normal' folders
-17) Put the validation scans in '…\codebase\models\validationSet\glaucoma' and '…\codebase\models\validationSet\normal' folders
-18) Put the test scans in '…\testingDataset\fundus_test_images' folder.
-19) Uncomment the path at line 44 within the 'ragClassifier.py' file. Note: if you want to perform OCT analysis again, this line has to be commented again
-20) Run 'ragClassifier.py' to produce classify normal and glaucomic fundus scans. The results will saved in a mat file within  '…\testingDataset\diagnosisResults' folder once the analysis is completed. Note: Before running 'ragClassifier.py', please make sure you have the saved 'model.h5' file generated through step 9 because RAG-Net<sub>v2</sub> classification model initially adapts the weights of the trained RAG-Net<sub>v2</sub> segmentation unit for faster convergence.
-</p>
+1) Repeat the steps 1 to 5 as mentioned above.
+2) Open Evaluation.py file, load the trained model (line 183), and choose the loss function used during the model training (line 185 to 187).
+3) Run Trainer.py script to begin the training. 
+4) After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
 
 ## Results
 We have provided the quantitative andresults in the 'results' folder. Please contact us if you want to get the trained model instances.
@@ -87,47 +77,3 @@ If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), ple
 
 ## Contact
 If you have any query, please feel free to contact us at: taimur.hassan@ku.ac.ae.
-
-
-## Prerequisites
-MATLAB R2020a platform with deep learning, image processing, and computer vision toolboxes. 
-
-## Stepwise Operations
-We provide separate main files for four operations, including preprocessing, network training and validation, postprocessing, and quantification.
-
-<p align="justify">
-<b>Data Preprocessing </b>
-
-  1.	Put the raw OCT scans data in the “…\Raw Scans” folder and pixel-wise ground truth annotations in the “…\Ground Truth Labels” folder. The label IDs corresponding to each class pixel are provided in the “Classes_ID.mat” file.
-  2.	To preprocess the scans, use the “Preprocessor.m” file. The scans containing VMT CRBM are preprocessed differently. Please select the option “Yes” if the candidate OCT scan has the VMT CRBM and “No” otherwise. The preprocessed scans are stored in the “…\Preprocessed” folder. The values of preprocessing parameters are empirically adjusted, generating adequate results in most cases. 
-
-<b>Network Training and Validation </b>
-
-  3.	The network requires the preprocessed scans for training as stored in the “…\Preprocessed” folder in the previous step.
-  4.	To train the network from scratch, use the “Trainingcode.m” file and specify the training hyper-parameters. The data is split in the ratio of 60:20:20 for the train, validate, and test subsets. The IDs of each relevant subset are stored in the “Idx.mat” file. 
-  5.	Once the network training is completed, the trained instances are saved as a “TrainedNet.mat” file. While the predicted labels are stored in the “…\Predicted Labels” folder.
-  
-<b>Data Postprocessing </b>
-
-  6.  In the next step, the network predicted results are cleaned using the postprocessing scheme. For this purpose, use the “Postprocessing.m” file.
-  7.  This step requires the predicted scans for postprocessing stored in the “…\Predicted Labels” folder in the previous step.
-  8.  The final postprocessed scans are stored in the “…\PostProcessed” folder. 
-
-<b>CRBMs Quantification </b>
-
-  9.  The quantification of CRBMs can be performed at the B-scan level or the eye level using OCT volumes.
-  10. This step requires the postprocessed scans stored in the “...\OCT Volumes\1\Postprocessed” folder, generated using the postprocessing scheme. Put the corresponding ground truth labels in the “...\OCT Volumes\1\Ground Truth Labels” folder.
-  11. Run the “Quantification.m” file for CRBMs quantification. This step also generates the 3D macular profile of the candidate OCT volume along with the quantification results and saves them in the “...\OCT Volumes\1\3DQuantification” folder.
-</p>
-
-## Results
-We have provided the results of 20 sample OCT scans in the “...\Other” directory.
-
-## Contact
-If you have any query, please feel free to contact us at bilalhassan@buaa.edu.cn 
-
-	
-
-
-
-  
