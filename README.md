@@ -58,7 +58,7 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 11) We have also provided the best-segmentation results achieved on the test dataset, which can be downloaded from the following links:
 </p>
 
-[Single Channel](https://drive.google.com/file/d/1EYNhL9IvpVB2OhiWZ6bCtsHBsmP7cdQr/view?usp=sharing) 
+[Single Channel](https://drive.google.com/file/d/1EYNhL9IvpVB2OhiWZ6bCtsHBsmP7cdQr/view?usp=sharing), 
 [RGB](https://drive.google.com/file/d/1NqfeLfZdfSZBtKzP1HJYFgquuejcFI4f/view?usp=sharing)
 
 
