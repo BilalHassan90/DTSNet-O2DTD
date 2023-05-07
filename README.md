@@ -56,8 +56,8 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 10) After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder.
 <p align="justify">
 11) We have also provided the best-segmentation results achieved on the test dataset, which can be downloaded from the following links:
-[URL](https://drive.google.com/file/d/1EYNhL9IvpVB2OhiWZ6bCtsHBsmP7cdQr/view?usp=sharing)
-[URL](https://drive.google.com/file/d/1NqfeLfZdfSZBtKzP1HJYFgquuejcFI4f/view?usp=sharing)
+[Single Channel] (https://drive.google.com/file/d/1EYNhL9IvpVB2OhiWZ6bCtsHBsmP7cdQr/view?usp=sharing)
+[RGB] (https://drive.google.com/file/d/1NqfeLfZdfSZBtKzP1HJYFgquuejcFI4f/view?usp=sharing)
 
 <b>Using Trained Instance of the Model</b>
 <p align="justify">
