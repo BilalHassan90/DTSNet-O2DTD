@@ -22,28 +22,32 @@ This repository contains the source code of our propsed benhmark method DTSNet p
 ## Installation
 To run the codebase, following libraries are required. Although, the framework is developed using Anaconda. But it should be compatable with other platforms.
 
-1) TensorFlow 2.1.0
-2) Keras-gpu 2.3.1 
-3) OpenCV 4.5.0
+1) tensorflow 2.1.0
+2) keras-gpu 2.3.1 
+3) opencv 4.5.0
 4) scipy 1.5.2
-5) cudnn 7.6.5
+5) tqdm 4.65.0
 6) imgaug 0.4.0 
-7) Matplotlib 3.4.3, and more
+7) matplotlib 3.4.3, and more
 
 Alternatively, we also provide a yml file that contains all dependencies used for running the codes.
 
 ## Dataset
 We have curated our own local dataset called Off-Road Open Desert Trail Detection (O2DTD), which is the first and largest dataset to focus on desert free space detection. We believe O2DTD dataset will help advance off-road autonomous driving and navigation systems. The dataset can be downloaded from the following link:
 
-[O2DTD Dataset](https://drive.google.com/file/d/1A-R5un-S6QiFb4nLzGhCzGB7hdqdrF0-/view?usp=sharing)
+[O2DTD dataset](https://drive.google.com/file/d/1A-R5un-S6QiFb4nLzGhCzGB7hdqdrF0-/view?usp=sharing)
 
 ## Steps 
 <p align="justify">
-<b>For OCT Analysis</b>
+<b>For Training the Model</b>
 
-1) Download the AFIO dataset
-2) Use 'preprocessor2.m' or 'structure_tensor_get.py' to preprocess the input scans
-3) Use 'augmentation.py' or 'augmentor.m' to augment the training scans
+1) Create an environment using yml file and install any other packages if neccessary.
+2) Download the O2DTD dataset from the link above.
+3) Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.
+4) Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.
+5) Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.
+
+	Use 'augmentation.py' or 'augmentor.m' to augment the training scans
 4) Put the augmented training images in '…\trainingDataset\train_images' and '…\codebase\models\trainingSet' folders. The former one is used for segmentation and the latter one is used for the classification purposes.
 5) Put the training annotations (for segmentation) in '…\trainingDataset\train_annotations' folder
 6) Put validation images in '…\trainingDataset\val_images' and '…\codebase\models\validationSet' folders. The former one is used for segmentation and the latter one is used for the classification purposes.
