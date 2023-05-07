@@ -54,12 +54,6 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 9) Run Trainer.py script to begin the training. 
 <p align="justify">
 10) After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder.
-<p align="justify">
-11) We have also provided the best-segmentation results achieved on the test dataset, which can be downloaded from the following links:
-</p>
-
-[Single Channel](https://drive.google.com/file/d/1EYNhL9IvpVB2OhiWZ6bCtsHBsmP7cdQr/view?usp=sharing), 
-[RGB](https://drive.google.com/file/d/1NqfeLfZdfSZBtKzP1HJYFgquuejcFI4f/view?usp=sharing)
 
 
 <b>Using Trained Instance of the Model</b>
@@ -73,7 +67,12 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 4) After the evaluation completes, the segmented results along with the MAT files containing confidence scores will be stored in the '…Data/TestDataset/ResultsMATFiles//' folder. The results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
 
 ## Results
-We have provided the quantitative andresults in the 'results' folder. Please contact us if you want to get the trained model instances.
+<p align="justify">
+We have also provided the best-segmentation results achieved on the test dataset, which can be downloaded from the following links:
+</p>
+
+[Single Channel](https://drive.google.com/file/d/1EYNhL9IvpVB2OhiWZ6bCtsHBsmP7cdQr/view?usp=sharing), 
+[RGB](https://drive.google.com/file/d/1NqfeLfZdfSZBtKzP1HJYFgquuejcFI4f/view?usp=sharing)
 
 ## Citation
 If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), please cite the following paper:
