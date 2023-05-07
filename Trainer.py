@@ -24,8 +24,11 @@ tf.compat.v1.keras.backend.set_session(session)
 
 model = DTSNet(n_classes=4,  height=576, width=768)
 
-learning_rate=0.1
-optimizer= keras.optimizers.Adadelta(learning_rate)                   
+learning_rate=0.1			## (0.1, 0.01, 0.001)
+optimizer= keras.optimizers.Adadelta(learning_rate)		## Adadelta    
+## optimizer= keras.optimizers.SGM(learning_rate, momentum = 0.9)	## SGDM                  
+## optimizer= keras.optimizers.Adam(learning_rate)			## SGDM                  
+
 print("Learning rate is", learning_rate)
 
 history = model.train(
