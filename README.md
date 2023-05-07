@@ -55,10 +55,10 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 
 <b>Using Trained Instance of the Model</b>
 
-1) Repeat the steps 1 to 5 as mentioned above.
+1) Repeat the steps 1 to 5, as mentioned above.
 2) Open Evaluation.py file, load the trained model (line 183), and choose the loss function used during the model training (line 185 to 187).
-3) Run Trainer.py script to begin the training. 
-4) After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
+3) Run the Evaluation.py script to segment the test images using saved model instance. 
+4) After the evaluation completes, the segmented results along with the MAT files containing confidence scores will be stored in the '…Data/TestDataset/ResultsMATFiles//' folder. The results summary will be stored in the '…Data/TestDataset/results_summary/' folder. 
 
 ## Results
 We have provided the quantitative andresults in the 'results' folder. Please contact us if you want to get the trained model instances.
