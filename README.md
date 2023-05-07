@@ -2,7 +2,8 @@
 This repository provides the official implementation of the paper titled <b>“O2DTD: An annotated dataset for training deep learning systems for off-road open desert trail detection”</b> The paper has been submitted for consideration in the Nature Scientific Data journal.
 
 ## Introduction
-A residual-learning-based asymmetric encoder-decoder network (RASP-Net) is proposed in this research. RASP-Net provides semantic segmentation and quantification of the following 11 OCT imaging-based chorioretinal biomarkers (CRBMs): (i) health (H), (ii) intraretinal fluid (IRF), (iii) subretinal fluid (SRF), (iv) serous pigment epithelial detachment (PED), (v) drusen/ reticular pseudodrusen (RPD), (vi) hard exudates or hyperreflective foci (HF), (vii) chorioretinal or geographic atrophy (GA), (viii) focal choroidal excavation (FCE), (ix) vitreomacular traction (VMT), (x) epiretinal membrane (ERM), and (xi) choroidal neovascular membrane (CNVM). RASP-Net operates at OCT B-scan level and requires pixel-wise annotations of 11 CRBMs against each scan. The overview of the proposed RASP-Net framework is presented below: 
+In this work, we addresses the gap in the literature related to free space detection in off-road scenarios, particularly in desert environments, and presents a new dataset and deep learning model that can be used as a benchmark for future research in this area. Overall, this work represents a significant step towards enhancing the capabilities of autonomous driving and navigation systems in off-road scenarios, where free space detection is critical for safe and efficient operation.
+
 
 <p align="center">
 <img width=800 align="center" src = "https://github.com/BilalHassan90/OCT-Biomarker-Segmentation/blob/main/Images/Overview.jpg" alt="Introduction"> </br>
@@ -11,7 +12,7 @@ A residual-learning-based asymmetric encoder-decoder network (RASP-Net) is propo
 **Figure:** Overview of the proposed method. The RASP-Net framework integrated with coherent pre- and post-processing to perform the joint segmentation, quantification, and 3-D visualization of OCT imaging-based chorioretinal biomarkers.
 
 
-This repository contains the source code of our propsed benhmark method DTSNet paper published in IEEE Transactions on Biomedical Engineering. The proposed framework is developed using <b>TensorFlow 2.3.1</b> and <b>Keras APIs</b> with <b>Python 3.7.8</b>. Moreover, the results are compiled through <b>MATLAB R2020a</b>. The detailed steps for installing and running the code are presented below:
+This repository contains the source code of our propsed benhmark method DTSNet submitted for consideration in the Nature Scientific Data journal. The proposed framework is developed using <b>TensorFlow 2.3.1</b> and <b>Keras APIs</b> with <b>Python 3.7.8</b>. The detailed steps for installing and running the code are presented below:
 
 ## Installation
 To run the codebase, following libraries are required. Although, the framework is developed using Anaconda. But it should be compatable with other platforms.
