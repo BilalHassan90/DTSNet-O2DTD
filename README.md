@@ -40,7 +40,7 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 ## Steps 
 <p align="justify">
 <b>Training the Model</b>
-
+<p align="justify">
 1) Create an environment using yml file and install any other packages if neccessary.
 2) Download the O2DTD dataset from the link above.
 3) Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.
