@@ -1,12 +1,6 @@
 # DTSNet-O2DTD
 This repository provides the official implementation of the paper titled <b>“O2DTD: An annotated dataset for training deep learning systems for off-road open desert trail detection”</b> The paper has been submitted for consideration in the Nature Scientific Data journal.
 
-## Citation
-If you use any part of the provided code in your research, please consider citing the paper as follows:
-```
-
-}
-```
 ## Introduction
 A residual-learning-based asymmetric encoder-decoder network (RASP-Net) is proposed in this research. RASP-Net provides semantic segmentation and quantification of the following 11 OCT imaging-based chorioretinal biomarkers (CRBMs): (i) health (H), (ii) intraretinal fluid (IRF), (iii) subretinal fluid (SRF), (iv) serous pigment epithelial detachment (PED), (v) drusen/ reticular pseudodrusen (RPD), (vi) hard exudates or hyperreflective foci (HF), (vii) chorioretinal or geographic atrophy (GA), (viii) focal choroidal excavation (FCE), (ix) vitreomacular traction (VMT), (x) epiretinal membrane (ERM), and (xi) choroidal neovascular membrane (CNVM). RASP-Net operates at OCT B-scan level and requires pixel-wise annotations of 11 CRBMs against each scan. The overview of the proposed RASP-Net framework is presented below: 
 
