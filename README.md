@@ -6,10 +6,10 @@ In this work, we addresses the gap in the literature related to free space detec
 
 
 <p align="center">
-<img width=800 align="center" src = "https://github.com/BilalHassan90/OCT-Biomarker-Segmentation/blob/main/Images/Overview.jpg" alt="Introduction"> </br>
+<img width=800 align="center" src = "https://github.com/BilalHassan90/DTSNet-O2DTD/blob/main/Other/Fig.png" alt="Introduction"> </br>
 </p>
 
-**Figure:** Overview of the proposed method. The RASP-Net framework integrated with coherent pre- and post-processing to perform the joint segmentation, quantification, and 3-D visualization of OCT imaging-based chorioretinal biomarkers.
+**Figure:** Overview of the proposed methodology for O2DTD dataset curation and benchmarking. (a) Dataset collection, (b) Dataset annotation, (c) Dataset validation, (d) Upload to the data repository.
 
 
 This repository contains the source code of our propsed benhmark method DTSNet submitted for consideration in the Nature Scientific Data journal. The proposed framework is developed using <b>TensorFlow 2.3.1</b> and <b>Keras APIs</b> with <b>Python 3.7.8</b>. The detailed steps for installing and running the code are presented below:
