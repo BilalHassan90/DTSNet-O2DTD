@@ -60,7 +60,7 @@ f.savefig('Training Graph/TrainingGraph.png')
 f.show()
 plt.close(f)
 
-model.save("Model.h5")
+model.save("TrainedInstances/Model.h5")
 
 f_weighted_iou, mean_IoU, iou = model.evaluate_segmentation(inp_images_dir="Data/TestDataset/Images/"  , 
 	annotations_dir="Data/TestDataset/Labels/" )
