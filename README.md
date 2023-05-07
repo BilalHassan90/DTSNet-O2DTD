@@ -43,11 +43,11 @@ We have curated our own local dataset called Off-Road Open Desert Trail Detectio
 <ol>
 <li align="justify">Create an environment using yml file and install any other packages if neccessary.</li> 
 <li>Download the O2DTD dataset from the link above.</li> 
-<li>Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.</li> 
-<li>Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.</li> 
-<li>Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.</li> 
+<li align="justify">Copy the training images and single-channel labels from the downloaded dataset in '…Data/TrainDataset/Images' and '…Data/TrainDataset/Labels/' folders, respectively.</li> 
+<li align="justify">Copy the validation images and single-channel labels from the downloaded dataset in '…Data/ValidationDataset/Images/' and '…Data/ValidationDataset/Labels/' folders, respectively.</li> 
+<li align="justify">Copy the test images and single-channel labels from the downloaded dataset in '…Data/TestDataset/Images/' and '…Data/TestDataset/Labels/' folders, respectively.</li> 
 <li align="justify">Open Trainer.py file, specify the learning rate (line 27), and optimizer (line 28 to line 30). For benchmarking, we have tried three different learning rates (0.1, 0.01, 0.001) and three different optimizers (SGD, Adadelta, Adam). By default, the Trainer.py file contains the hyperparameters that produced the best results.</li> 
-<li>Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.</li> 
+<li align="justify">Open Train.py file, choose the loss function (line 103 to 105), and update it in the line 107. For benchmarking, we have tried three different loss functions (cross-entropy, Dice, Tversky). By default, the Train.py file loads the Dice loss that produced best segmentation results.</li> 
 <li>Check all other parameters and directories and update them if required.</li> 
 <li>Run Trainer.py script to begin the training. </li> 
 <li>After the training completes, model instance and training graph will be saved in the 'TrainedInstances' and 'Training Graph' folders, respectively. The segmented results on the test dataset will be stored in the '…Data/TestDataset/segmentation_results/' folder, and the results summary will be stored in the '…Data/TestDataset/results_summary/' folder. </li> 
