@@ -19,11 +19,9 @@ To run the codebase, following libraries are required. Although, the framework i
 
 1) tensorflow 2.1.0
 2) keras-gpu 2.3.1 
-3) opencv 4.5.0
-4) scipy 1.5.2
-5) tqdm 4.65.0
-6) imgaug 0.4.0 
-7) matplotlib 3.4.3, and more
+3) opencv 4.6.0
+4) tqdm 4.65.0
+5) matplotlib 3.4.3, and more
 
 Alternatively, we also provide a yml file that contains all dependencies used for running the codes.
 
@@ -76,7 +74,7 @@ We have also provided the best-segmentation results achieved on the test dataset
 [RGB](https://drive.google.com/file/d/1NqfeLfZdfSZBtKzP1HJYFgquuejcFI4f/view?usp=sharing)
 
 ## Citation
-If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), please cite the following paper:
+If you use O2DTD dataset, DTSNet model, or any part of this code in your research, please cite the following paper:
 
 ```
 @article{ragnetv2,
@@ -88,4 +86,4 @@ If you use RAG-Net<sub>v2</sub> (or any part of this code in your research), ple
 ```
 
 ## Contact
-If you have any query, please feel free to contact us at: taimur.hassan@ku.ac.ae.
+If you have any query, please feel free to contact us at: bilal.hassan@ku.ac.ae.
