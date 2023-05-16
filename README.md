@@ -79,18 +79,10 @@ If you use the O2DTD dataset, DTSNet model, or any part of this code in your res
 ```
 @article{O2DTD2023,
   title   = {O2DTD: An annotated dataset for training deep learning systems for off-road open desert trail detection},
-  author  = {Bilal Hassan and Hamad AlRemeithi, Ramsha Ahmed, Fakhreddine Zayer, Taimur Hassan, Majid Khonji, and Jorge Dias},
-  journal = {IEEE Transactions on Biomedical Engineering},
-  year = {2020}
-}
-@article{badue2021self,
-  title={{Self-driving cars: A survey}},
-  author={Badue, Claudine and Guidolini, R{\^a}nik and Carneiro, Raphael Vivacqua and Azevedo, Pedro and Cardoso, Vinicius B and Forechi, Avelino and Jesus, Luan and Berriel, Rodrigo and Paixao, Thiago M and Mutz, Filipe and others},
-  journal={Expert Systems with Applications},
-  volume={165},
-  pages={113816},
-  year={2021},
-  publisher={Elsevier}
+  author  = {Hassan, Bilal and AlRemeithi, Hamad and Ahmed, Ramsha and Zayer, Fakhreddine and Hassan, Taimur and Khonji, Majid Khonji and Dias, Jorge},
+  journal = {Scientific Data},
+  year = {2023},
+  publisher={Nature}
 }
 ```
 
