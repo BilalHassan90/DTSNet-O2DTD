@@ -28,7 +28,7 @@ Alternatively, we also provide a yml file that contains all dependencies used fo
 ## Dataset
 We have curated our local dataset called Off-Road Open Desert Trail Detection (O2DTD), the first and largest dataset to focus on desert free space detection. We believe the O2DTD dataset will help advance off-road autonomous driving and navigation systems. The dataset can be downloaded from the following link:
 
-[O2DTD dataset](https://drive.google.com/file/d/1A-R5un-S6QiFb4nLzGhCzGB7hdqdrF0-/view?usp=sharing)
+[O2DTD dataset](https://drive.google.com/file/d/1A-R5un-S6QiFb4nLzGhCzGB7hdqdrF0-/view?usp=share_link)
 
 ## Steps 
 <p align="justify">
