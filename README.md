@@ -60,7 +60,7 @@ We have curated our local dataset called Off-Road Open Desert Trail Detection (O
 1) Repeat the steps 1 to 5, as mentioned above. </p>
 <p align="justify">
 2) Download the trained instances from the below link, and 'TrainedInstance' folder.</p>
-[Trained Instances](https://drive.google.com/drive/folders/1k5-xei0G9GUs0eRLErF90uwmlKdwWxhD)
+[Single Channel](https://drive.google.com/drive/folders/1k5-xei0G9GUs0eRLErF90uwmlKdwWxhD)
 <p align="justify">
 3) Open the Evaluation.py file, load the trained model (line 183), and choose the loss function used during the model training (lines 185 to 187).
 <p align="justify">
