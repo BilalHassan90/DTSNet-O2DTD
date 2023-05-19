@@ -57,7 +57,7 @@ We have curated our local dataset called Off-Road Open Desert Trail Detection (O
 
 <b>Using Trained Instance of the Model</b>
 <p align="justify">
-1) Repeat the steps 1 to 5, as mentioned above.
+1) Repeat the steps 1 to 5, as mentioned above. </p>
 <p align="justify">
 2) Download the trained instances from the below link, and 'TrainedInstance' folder.</p>
 [Trained Instances](https://drive.google.com/drive/folders/1k5-xei0G9GUs0eRLErF90uwmlKdwWxhD)
