@@ -85,9 +85,6 @@ If you use the O2DTD dataset, DTSNet model, or any part of this code in your res
 @article{O2DTD2023,
   title   = {O2DTD: An annotated dataset for training deep learning systems for off-road open desert trail detection},
   author  = {Hassan, Bilal and AlRemeithi, Hamad and Ahmed, Ramsha and Zayer, Fakhreddine and Hassan, Taimur and Khonji, Majid Khonji and Dias, Jorge},
-  journal = {Scientific Data},
-  year = {2023},
-  publisher={Nature}
 }
 ```
 
